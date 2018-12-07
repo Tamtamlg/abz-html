@@ -34,13 +34,13 @@ const fileinclude = require('gulp-file-include');
 
 // Перечисление и настройки плагинов postCSS, которыми обрабатываются стилевые файлы
 let postCssPlugins = [
-  autoprefixer({                                           // автопрефиксер
+  autoprefixer({
     browsers: ['last 2 version']
   }),
-  mqpacker({                                               // объединение медиавыражений с последующей их сортировкой
+  mqpacker({
     sort: true
   }),
-  objectFitImages(),                                       // возможность применять object-fit
+  objectFitImages(),
 ];
 
 // Изображения, которые нужно копировать
@@ -61,8 +61,8 @@ let jsList = [
 
 // Компиляция и обработка стилей
 gulp.task('style', function () {
-  return gulp.src(dirs.source + '/scss/style.scss')        // какой файл компилировать
-    .pipe(plumber({                                        // при ошибках не останавливаем автоматику сборки
+  return gulp.src(dirs.source + '/scss/style.scss')
+    .pipe(plumber({
       errorHandler: function(err) {
         notify.onError({
           title: 'Styles compilation error',
@@ -72,15 +72,15 @@ gulp.task('style', function () {
       }
     }))
     .pipe(wait(100))
-    .pipe(sourcemaps.init())                               // инициируем карту кода
-    .pipe(sass())                                          // компилируем
-    .pipe(postcss(postCssPlugins))                         // делаем постпроцессинг
-    .pipe(sourcemaps.write('/'))                           // записываем карту кода как отдельный файл
-    .pipe(gulp.dest(dirs.build + '/css/'))                 // записываем CSS-файл
-    .pipe(browserSync.stream({match: '**/*.css'}))         // укажем browserSync необходимость обновить страницы в браузере
-    .pipe(rename('style.min.css'))                         // переименовываем (сейчас запишем рядом то же самое, но минимизированное)
-    .pipe(cleanCSS())                                      // сжимаем и оптимизируем
-    .pipe(gulp.dest(dirs.build + '/css/'));                // записываем CSS-файл
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(postcss(postCssPlugins))
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest(dirs.build + '/css/'))
+    .pipe(browserSync.stream({match: '**/*.css'}))
+    .pipe(rename('style.min.css'))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(dirs.build + '/css/'));
 });
 
 // Обработка HTML
@@ -203,10 +203,10 @@ gulp.task('clean', function () {
 gulp.task('js', function (callback) {
   if(jsList.length) {
     return gulp.src(jsList)
-      .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
-      .pipe(concat('vendor.min.js'))                        // конкатенируем все файлы в один с указанным именем
-      .pipe(uglify())                                       // сжимаем
-      .pipe(gulp.dest(dirs.build + '/js'));                 // записываем
+      .pipe(plumber({ errorHandler: onError }))
+      .pipe(concat('vendor.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest(dirs.build + '/js'));
   }
   else {
     console.log('Javascript не обрабатывается');
@@ -236,7 +236,7 @@ gulp.task('serve', ['build'], function() {
     open: true,
     port: 3000,
   });
-  // Слежение за стилями
+
   gulp.watch([
     dirs.source + '/scss/style.scss',
     dirs.source + '/scss/variables.scss',
@@ -244,25 +244,22 @@ gulp.task('serve', ['build'], function() {
     dirs.source + '/scss/base.scss',
     dirs.source + '/blocks/**/*.scss',
   ], ['style']);
-  // Слежение за html
+
   gulp.watch([
     dirs.source + '/**/*.html',
   ], ['watch:html']);
-  // Слежение за изображениями
+  
   if(images.length) {
     gulp.watch(images, ['watch:img']);
   }
-  // Слежение за шрифтами
+
   gulp.watch(dirs.source + '/fonts/**/*.*', ['watch:fonts']);
-  // Слежение за SVG (спрайты)
   gulp.watch('*.svg', {cwd: spriteSvgPath}, ['watch:sprite:svg']);
-  // Слежение за JS
   gulp.watch(dirs.source + '/js/**/*.*', ['watch:js']);
-  // Слежение за файлами css, которые не нужно компилировать
   gulp.watch(dirs.source + '/css/*.css', ['watch:css']);
 });
 
-// Браузерсинк с 3-м галпом — такой браузерсинк...
+
 gulp.task('watch:html', ['html'], reload);
 gulp.task('watch:img', ['copy:img'], reload);
 gulp.task('watch:fonts', ['copy:fonts'], reload);

@@ -1,16 +1,16 @@
 {
-  "name": "start",
+  "name": "abz-html",
   "version": "1.0.0",
-  "description": "Starting project with Gulp",
+  "description": "abz test task",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
   },
-  "author": "Tamtamlg",
+  "author": "Vitaliy Podrez",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tamtamlg/start-gulp.git"
+    "url": "https://github.com/Tamtamlg/abz-html"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

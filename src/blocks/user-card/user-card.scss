@@ -1,0 +1,33 @@
+.user-card {
+  display: flex;
+  margin-bottom: 58px;
+}
+
+.user-card__heading {
+  color: #000;
+  font-family: $font1;
+  font-size: 22px;
+  font-weight: 700;
+  width: 85%;
+}
+
+.user-card__img {
+  min-width: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.user-card__info {
+  padding-top: 25px;
+  p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
