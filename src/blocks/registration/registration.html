@@ -33,7 +33,7 @@
       <div class="col-md-6">
         <div class="form-group registration__select">
           <input type="text" class="form-control registration__control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="Select your position">
-          <ul class="registration__dropdown registration-dropdown">
+          <ul class="registration__dropdown registration-dropdown d-none">
             <li class="registration-dropdown__item registration-dropdown__item--selected">Selected item</li>
             <li class="registration-dropdown__item">Second item</li>
             <li class="registration-dropdown__item">Thurd item</li>
@@ -47,7 +47,12 @@
               <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
               <label class="custom-file-label registration__control" for="inputGroupFile04">
                 <span>Upload your photo</span>
-                <div class="custom-file-label__btn" role="button">Browse</div>
+                <div class="custom-file-label__btn" role="button">
+                  <span class="d-none d-md-inline-block">Browse</span>
+                  <svg class="svg d-block d-md-none" width="20px" height="24px">
+                    <use xlink:href="img/sprite.svg#upload"></use>
+                  </svg>
+                </div>
               </label>
             </div>
           </div>

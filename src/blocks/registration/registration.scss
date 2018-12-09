@@ -1,5 +1,11 @@
 .registration {
-  margin-bottom: 150px;
+  margin-bottom: 60px;
+  @media (min-width: 992px) {
+    margin-bottom: 150px;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 117px;
+  }
 }
 
 .registration__form {
@@ -15,12 +21,22 @@
   }
   .form-group {
     position: relative;
+    @media (max-width: 767px) {
+      margin-bottom: 36px;
+    }
     input {
       color: #010000;
       font-family: $font2;
       font-size: 16px;
       font-weight: 400;
+      
     }
+  }
+  .custom-file {
+    height: 56px;
+  }
+  .custom-file input {
+    height: 56px;
   }
   .custom-file-label {
     z-index: 3;
@@ -51,6 +67,12 @@
       color: #fc831f;
       background: #fee6d2;
     }
+    @media (max-width: 767px) {
+      width: 56px;
+    }
+  }
+  @media (max-width: 767px) {
+    text-align: left;
   }
 }
 
@@ -58,6 +80,12 @@
   margin-bottom: 25px;
   &:nth-child(2) {
     margin-bottom: 42px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+    &:nth-child(2) {
+      margin-bottom: 0; 
+    }
   }
 }
 
@@ -78,6 +106,9 @@
   font-size: 16px;
   height: auto;
   padding: 15px;
+  @media (max-width: 767px) {
+    text-align: left;
+  }
 }
 
 .registration__btn {
@@ -85,25 +116,41 @@
 }
 
 .registration__headings-wrap {
-  margin-bottom: 60px;
+  margin-bottom: 33px;
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
 }
 
 .registration__heading {
   color: #000;
   font-family: $font1;
-  font-size: 42px;
+  font-size: 26px;
   font-weight: 400;
   margin-bottom: 15px;
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: 42px;
+  }
 }
 
 .registration__subheading {
   color: #010000;
   font-family: $font2;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 0;
   text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 992px) {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    width: 55%;
+    font-size: 18px;
+  }
 }
 
 .registration__hint {
@@ -137,7 +184,7 @@
   top: calc(100% + 3px);
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 .registration-dropdown__item {
