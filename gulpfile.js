@@ -52,9 +52,6 @@ let images = [
 
 // Cписок обрабатываемых файлов в указанной последовательности
 let jsList = [
-  './node_modules/jquery/dist/jquery.min.js',
-  './node_modules/popper/dist/popper.min.js',
-  './node_modules/bootstrap/dist/js/bootstrap.min.js',
   './node_modules/svg4everybody/dist/svg4everybody.js',
   './node_modules/object-fit-images/dist/ofi.js'
 ];
