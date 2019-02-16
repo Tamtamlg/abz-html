@@ -56,7 +56,8 @@
     left: -260px;
     width: 260px;
     background: #fff;
-    z-index: 100;
+    z-index: 102;
+    transition: all 0.3s;
     .container,
     .row,
     .col {
@@ -123,10 +124,14 @@
     .user-block__email {
       font-size: 13px;
     }
+    &.shown {
+      left: 0;
+    }
   }
 }
 
 .overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -134,5 +139,9 @@
   bottom: 0;
   background-color: #160c0d;
   opacity: 0.32;
-  z-index: 99;
+  z-index: 101;
+  transition: all 0.3s;
+  &.shown {
+    display: block;
+  }
 }

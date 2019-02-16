@@ -155,6 +155,7 @@ h5 {
     width: 22px; }
 
 .overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -162,7 +163,11 @@ h5 {
   bottom: 0;
   background-color: #160c0d;
   opacity: 0.32;
-  z-index: 99; }
+  z-index: 101;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .overlay.shown {
+    display: block; }
 
 .footer {
   background: #283593;
@@ -351,11 +356,13 @@ h5 {
     color: #ef6c00; }
 
 .jumbotron {
-  background: #283593 url("../img/bg-1.jpg") center top no-repeat;
+  background: #283593 center top no-repeat;
   background-size: cover;
   margin-bottom: 67px;
   border-radius: 0;
   padding: 0; }
+  .jumbotron.lazy-bg--loaded {
+    background-image: url("../img/bg-1.jpg"); }
 
 .jumbotron__info {
   padding: 65px 0 73px;
@@ -494,10 +501,13 @@ h5 {
 
 .requirements {
   min-height: 692px;
-  background: #283593 url("../img/bg-2.jpg") center top no-repeat;
+  background: #283593 center top no-repeat;
+  background-size: cover;
   color: #fff;
   padding: 68px 0 52px;
   margin-bottom: 68px; }
+  .requirements.lazy-bg--loaded {
+    background-image: url("../img/bg-2.jpg"); }
 
 .requirements__heading {
   color: #fff;
@@ -757,6 +767,9 @@ h5 {
     top: calc(50% - 3px);
     border: 10px solid transparent;
     border-top: 10px solid #000; }
+  .registration__select input[readonly] {
+    cursor: default;
+    background: #fff; }
 
 .footer-social {
   margin: 0;
@@ -780,6 +793,10 @@ h5 {
 
 .footer-social__link:hover .svg {
   fill: #ef6c00; }
+
+.webp .jumbotron.lazy-bg--loaded { background-image: url(../img/bg-1.webp); }
+
+.webp .requirements.lazy-bg--loaded { background-image: url(../img/bg-2.webp); }
 
 @media (min-width: 768px) {
   .container {
@@ -1026,7 +1043,9 @@ h5 {
     left: -260px;
     width: 260px;
     background: #fff;
-    z-index: 100; }
+    z-index: 102;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
     .mobile-menu .container,
     .mobile-menu .row,
     .mobile-menu .col {
@@ -1109,6 +1128,8 @@ h5 {
       font-size: 20px;
       margin-bottom: 5px; }
     .mobile-menu .user-block__email {
-      font-size: 13px; } }
+      font-size: 13px; }
+    .mobile-menu.shown {
+      left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

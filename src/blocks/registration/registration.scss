@@ -213,4 +213,8 @@
     border: 10px solid transparent;
     border-top: 10px solid #000;
   }
+  input[readonly] {
+    cursor: default;
+    background: #fff;
+  }
 }

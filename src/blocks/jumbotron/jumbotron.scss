@@ -1,9 +1,12 @@
 .jumbotron {
-  background: #283593 url('../img/bg-1.jpg') center top no-repeat;
+  background: #283593 center top no-repeat;
   background-size: cover;
   margin-bottom: 67px;
   border-radius: 0;
   padding: 0;
+  &.lazy-bg--loaded {
+    background-image: url('../img/bg-1.jpg');
+  }
   @media (min-width: 992px) {
     margin-bottom: 135px;
   }

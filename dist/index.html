@@ -40,7 +40,7 @@
 <body>
   <div class="wrapper">
     <!-- header mobile-menu -->
-    <header class="header mobile-menu">
+    <header class="header mobile-menu" id="mobileMenu">
       <div class="container">
         <div class="row">
           <div class="col header__col">
@@ -106,21 +106,21 @@
                     <use xlink:href="img/sprite.svg#logo"></use>
                   </svg>
                 </a>
-            <a class="menu-btn" href="#" role="button">
+            <a class="menu-btn" href="#" role="button" id="menuBtn">
                   <span class="hamburger"></span>
                 </a>
           </div>
         </div>
       </div>
     </header>
-    <!-- <div class="overlay"></div> -->
+    <div class="overlay" id="overlay"></div>
     <!-- /header -->
     <!-- content -->
     <div class="content">
 
       <main>
         <!-- jumbotron -->
-        <div class="jumbotron">
+        <div class="jumbotron lazy-bg">
           <div class="container">
             <div class="row">
               <div class="col-lg-6 col-md-7">
@@ -149,272 +149,320 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="acquaintance__img">
-                  <img src="img/man-mobile.svg" alt="">
-        </div>
+                  <img
+            class="lazy"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-src="img/man-mobile.svg"
+            data-srcset="img/man-mobile.svg"
+            alt=""
+          >
+                  <noscript>
+            <img src="man-mobile.svg" alt="">
+          </noscript>
                 </div>
-                <div class="col-md-8">
-                  <div class="acquaintance__text">
-                    <h3 class="acquaintance__subheading">I am cool frontend developer</h3>
-                    <p>When real users have a slow experience on mobile, they're much less likely to find what they are looking for or purchase from you in the future. For many sites this equates to a huge missed opportunity, especially when more than half of visits are abandoned if a mobile page takes over 3 seconds to load.</p>
-                    <p>Last week, Google Search and Ads teams announced two new speed initiatives to help improve user-experience on the web.</p>
-                    <a href="#" class="acquaintance__link">Sign Up</a>
-                  </div>
+              </div>
+              <div class="col-md-8">
+                <div class="acquaintance__text">
+                  <h3 class="acquaintance__subheading">I am cool frontend developer</h3>
+                  <p>When real users have a slow experience on mobile, they're much less likely to find what they are looking for or purchase from you in the future. For many sites this equates to a huge missed opportunity, especially when more than half of visits are abandoned if a mobile page takes over 3 seconds to load.</p>
+                  <p>Last week, Google Search and Ads teams announced two new speed initiatives to help improve user-experience on the web.</p>
+                  <a href="#" class="acquaintance__link">Sign Up</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- /acquaintance -->
+        </div>
+        <!-- /acquaintance -->
 
 
-          <!-- about -->
-          <div class="about">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <h2 class="about__heading">About my relationships with web-development</h2>
+        <!-- about -->
+        <div class="about">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h2 class="about__heading">About my relationships with web-development</h2>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <!-- about-item -->
+                <div class="about__item about-item">
+                  <div class="about-item__img">
+                    <img
+      class="lazy"
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-src="img/html.svg"
+      data-srcset="img/html.svg"
+      alt=""
+    >
+                    <noscript>
+      <img src="img/html.svg" alt="">
+    </noscript>
+                  </div>
+                  <div class="about-item__info">
+                    <h3 class="about-item__heading">I'm in love with HTML</h3>
+                    <p class="about-item__text">Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>
+                  </div>
+                </div>
+                <!-- /about-item -->
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <!-- about-item -->
+                <div class="about__item about-item">
+                  <div class="about-item__img">
+                    <img
+      class="lazy"
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-src="img/css.svg"
+      data-srcset="img/css.svg"
+      alt=""
+    >
+                    <noscript>
+      <img src="img/css.svg" alt="">
+    </noscript>
+                  </div>
+                  <div class="about-item__info">
+                    <h3 class="about-item__heading">CSS is my best friend</h3>
+                    <p class="about-item__text">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+                  </div>
+                </div>
+                <!-- /about-item -->
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <!-- about-item -->
+                <div class="about__item about-item">
+                  <div class="about-item__img">
+                    <img
+      class="lazy"
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-src="img/javascript.svg"
+      data-srcset="img/javascript.svg"
+      alt=""
+    >
+                    <noscript>
+      <img src="img/javascript.svg" alt="">
+    </noscript>
+                  </div>
+                  <div class="about-item__info">
+                    <h3 class="about-item__heading">JavaScript is my passion</h3>
+                    <p class="about-item__text">JavaScript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.</p>
+                  </div>
+                </div>
+                <!-- /about-item -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /about -->
+
+
+        <!-- requirements -->
+        <div class="requirements lazy-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h2 class="requirements__heading">General requirements for the test task</h2>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row requirements__flex">
+              <div class="col-md-6">
+                <div class="requirements__text">
+                  <p>Users want to find answers to their questions quickly and data shows that people really care about how quickly their pages load. The Search team announced speed would be a ranking signal for desktop searches in 2010 and as of this month (July 2018), page speed will be a ranking factor for mobile searches too.</p>
+                  <p>If you're a developer working on a site, now is a good time to evaluate your performance using our speed tools. Think about how performance affects the user experience of your pages and consider measuring a variety of real-world user-centric performance metrics.</p>
+                  <p>Are you shipping too much JavaScript? Too many images? Images and JavaScript are the most significant contributors to the page weight that affect page load time based on data from HTTP Archive and the Chrome User Experience Report - our public dataset for key UX metrics as experienced by Chrome users under real-world conditions.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="requirements__img">
+
+                  <picture>
+                    <source class="lazy" data-srcset="img/man-laptop-v1.svg" media="(min-width: 992px)">
+                    <source class="lazy" data-srcset="img/man-laptop-v2.svg" media="(min-width: 767px)" media="(max-width: 991px)">
+                    <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/man-laptop-v1.svg" data-srcset="img/man-laptop-v1.svg" alt="">
+          </picture>
+                    <noscript>
+            <picture>
+              <source class="lazy" srcset="img/man-laptop-v1.svg" media="(min-width: 992px)">
+              <source class="lazy" srcset="img/man-laptop-v2.svg">
+              <img class="lazy" src="img/man-laptop-v1.svg" alt="">
+            </picture>
+          </noscript>
+
                 </div>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4 col-md-12">
-                  <!-- about-item -->
-                  <div class="about__item about-item">
-                    <div class="about-item__img">
-                      <img src="img/html.svg" alt="">
+          </div>
+        </div>
+        <!-- /requirements -->
+
+
+        <!-- users -->
+        <div class="users">
+          <div class="container users__headings-wrap">
+            <div class="row">
+              <div class="col">
+                <h2 class="users__heading">Our cheerful users</h2>
+                <h5 class="users__subheading">Attention! Sorting users by registration date</h5>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <!-- user-card -->
+                <div class="user-card">
+                  <div class="user-card__img">
+                    <img src="img/user-noah-2x.jpg" alt="">
   </div>
-                      <div class="about-item__info">
-                        <h3 class="about-item__heading">I'm in love with HTML</h3>
-                        <p class="about-item__text">Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.</p>
+                    <div class="user-card__info">
+                      <h4 class="user-card__heading">Noah</h4>
+                      <p class="mb-0 user-card__position">Leading specialist of the Control Department</p>
+                      <p class="mb-0 user-card__email text-truncate">noah.controldepartment@gmail.com</p>
+                      <p class="mb-0 user-card__phone">+38 (050) 678 03 24</p>
+                    </div>
+                  </div>
+                  <!-- /user-card -->
+                </div>
+                <div class="col-md-4">
+                  <!-- user-card -->
+                  <div class="user-card">
+                    <div class="user-card__img">
+                      <img src="img/user-adolph-2x.png" alt="">
+  </div>
+                      <div class="user-card__info">
+                        <h4 class="user-card__heading">Adolph Blaine Charles David Earl</h4>
+                        <p class="mb-0 user-card__position">The contextual advertising specialist</p>
+                        <p class="mb-0 user-card__email text-truncate">adolph.blainecharles-davidearl@example.com</p>
+                        <p class="mb-0 user-card__phone">+38 (095) 556 08 45</p>
                       </div>
                     </div>
-                    <!-- /about-item -->
+                    <!-- /user-card -->
                   </div>
-                  <div class="col-lg-4 col-md-12">
-                    <!-- about-item -->
-                    <div class="about__item about-item">
-                      <div class="about-item__img">
-                        <img src="img/css.svg" alt="">
+                  <div class="col-md-4">
+                    <!-- user-card -->
+                    <div class="user-card">
+                      <div class="user-card__img">
+                        <img src="img/user-liam-2x.jpg" alt="">
   </div>
-                        <div class="about-item__info">
-                          <h3 class="about-item__heading">CSS is my best friend</h3>
-                          <p class="about-item__text">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+                        <div class="user-card__info">
+                          <h4 class="user-card__heading">Liamgrievescasey Smith Wiam</h4>
+                          <p class="mb-0 user-card__position">Lead designer</p>
+                          <p class="mb-0 user-card__email text-truncate">liamgrievescasey@example.com</p>
+                          <p class="mb-0 user-card__phone">+38 (050) 273 93 32</p>
                         </div>
                       </div>
-                      <!-- /about-item -->
+                      <!-- /user-card -->
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                      <!-- about-item -->
-                      <div class="about__item about-item">
-                        <div class="about-item__img">
-                          <img src="img/javascript.svg" alt="">
+                    <div class="col-md-4">
+                      <!-- user-card -->
+                      <div class="user-card">
+                        <div class="user-card__img">
+                          <img src="img/user-elizabeth-2x.jpg" alt="">
   </div>
-                          <div class="about-item__info">
-                            <h3 class="about-item__heading">JavaScript is my passion</h3>
-                            <p class="about-item__text">JavaScript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.</p>
+                          <div class="user-card__info">
+                            <h4 class="user-card__heading">Elizabeth</h4>
+                            <p class="mb-0 user-card__position">Frontend developer</p>
+                            <p class="mb-0 user-card__email text-truncate">elisabet.frontend@gmail.com</p>
+                            <p class="mb-0 user-card__phone">+38 (095) 924 66 37</p>
                           </div>
                         </div>
-                        <!-- /about-item -->
+                        <!-- /user-card -->
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- /about -->
-
-
-                <!-- requirements -->
-                <div class="requirements">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <h2 class="requirements__heading">General requirements for the test task</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row requirements__flex">
-                      <div class="col-md-6">
-                        <div class="requirements__text">
-                          <p>Users want to find answers to their questions quickly and data shows that people really care about how quickly their pages load. The Search team announced speed would be a ranking signal for desktop searches in 2010 and as of this month (July 2018), page speed will be a ranking factor for mobile searches too.</p>
-                          <p>If you're a developer working on a site, now is a good time to evaluate your performance using our speed tools. Think about how performance affects the user experience of your pages and consider measuring a variety of real-world user-centric performance metrics.</p>
-                          <p>Are you shipping too much JavaScript? Too many images? Images and JavaScript are the most significant contributors to the page weight that affect page load time based on data from HTTP Archive and the Chrome User Experience Report - our public dataset for key UX metrics as experienced by Chrome users under real-world conditions.</p>
+                      <div class="col-md-4">
+                        <!-- user-card -->
+                        <div class="user-card">
+                          <div class="user-card__img">
+                            <img src="img/user-alexander-2x.jpg" alt="">
+  </div>
+                            <div class="user-card__info">
+                              <h4 class="user-card__heading">Alexander</h4>
+                              <p class="mb-0 user-card__position">Backend developer</p>
+                              <p class="mb-0 user-card__email text-truncate">alexander.backend@gmail.com</p>
+                              <p class="mb-0 user-card__phone">+38 (050) 789 24 09</p>
+                            </div>
+                          </div>
+                          <!-- /user-card -->
                         </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="requirements__img">
-                          <img src="img/man-laptop-v1.svg" alt="" class="d-block d-md-none d-lg-block">
-                          <img src="img/man-laptop-v2.svg" alt="" class="d-none d-md-block d-lg-none">
-        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /requirements -->
-
-
-                  <!-- users -->
-                  <div class="users">
-                    <div class="container users__headings-wrap">
-                      <div class="row">
-                        <div class="col">
-                          <h2 class="users__heading">Our cheerful users</h2>
-                          <h5 class="users__subheading">Attention! Sorting users by registration date</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container">
-                      <div class="row">
                         <div class="col-md-4">
                           <!-- user-card -->
                           <div class="user-card">
                             <div class="user-card__img">
-                              <img src="img/user-noah-2x.jpg" alt="">
+                              <img src="img/user-mason-2x.jpg" alt="">
   </div>
                               <div class="user-card__info">
-                                <h4 class="user-card__heading">Noah</h4>
-                                <p class="mb-0 user-card__position">Leading specialist of the Control Department</p>
-                                <p class="mb-0 user-card__email text-truncate">noah.controldepartment@gmail.com</p>
-                                <p class="mb-0 user-card__phone">+38 (050) 678 03 24</p>
+                                <h4 class="user-card__heading">Mason</h4>
+                                <p class="mb-0 user-card__position">QA</p>
+                                <p class="mb-0 user-card__email text-truncate">mason.qa@gmail.com</p>
+                                <p class="mb-0 user-card__phone">+38 (095) 283 27 00</p>
                               </div>
                             </div>
                             <!-- /user-card -->
                           </div>
-                          <div class="col-md-4">
-                            <!-- user-card -->
-                            <div class="user-card">
-                              <div class="user-card__img">
-                                <img src="img/user-adolph-2x.png" alt="">
-  </div>
-                                <div class="user-card__info">
-                                  <h4 class="user-card__heading">Adolph Blaine Charles David Earl</h4>
-                                  <p class="mb-0 user-card__position">The contextual advertising specialist</p>
-                                  <p class="mb-0 user-card__email text-truncate">adolph.blainecharles-davidearl@example.com</p>
-                                  <p class="mb-0 user-card__phone">+38 (095) 556 08 45</p>
-                                </div>
-                              </div>
-                              <!-- /user-card -->
+                        </div>
+                      </div>
+                      <div class="container users__btn-container">
+                        <div class="row">
+                          <div class="col d-flex">
+                            <button class="btn btn--primary btn--invers m-auto users__btn">Show more</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /users -->
+
+
+                    <!-- registration -->
+                    <div class="registration">
+                      <div class="container registration__headings-wrap">
+                        <div class="row">
+                          <div class="col">
+                            <h2 class="registration__heading">Register to get a work</h2>
+                            <h5 class="registration__subheading">Attention! After successful registration and alert, update the list of users in the block from the top</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <form class="container registration__form">
+                        <div class="row registration__row">
+                          <div class="col-md-4 ">
+                            <div class="form-group">
+                              <label for="exampleInput1" class="registration__lbl">Name</label>
+                              <input type="text" class="form-control registration__control" id="exampleInput1" placeholder="Your name">
+        </div>
                             </div>
                             <div class="col-md-4">
-                              <!-- user-card -->
-                              <div class="user-card">
-                                <div class="user-card__img">
-                                  <img src="img/user-liam-2x.jpg" alt="">
-  </div>
-                                  <div class="user-card__info">
-                                    <h4 class="user-card__heading">Liamgrievescasey Smith Wiam</h4>
-                                    <p class="mb-0 user-card__position">Lead designer</p>
-                                    <p class="mb-0 user-card__email text-truncate">liamgrievescasey@example.com</p>
-                                    <p class="mb-0 user-card__phone">+38 (050) 273 93 32</p>
-                                  </div>
-                                </div>
-                                <!-- /user-card -->
+                              <div class="form-group">
+                                <label for="exampleInput2" class="registration__lbl">Email</label>
+                                <input type="email" class="form-control registration__control" id="exampleInput2" placeholder="Your email">
+        </div>
                               </div>
                               <div class="col-md-4">
-                                <!-- user-card -->
-                                <div class="user-card">
-                                  <div class="user-card__img">
-                                    <img src="img/user-elizabeth-2x.jpg" alt="">
-  </div>
-                                    <div class="user-card__info">
-                                      <h4 class="user-card__heading">Elizabeth</h4>
-                                      <p class="mb-0 user-card__position">Frontend developer</p>
-                                      <p class="mb-0 user-card__email text-truncate">elisabet.frontend@gmail.com</p>
-                                      <p class="mb-0 user-card__phone">+38 (095) 924 66 37</p>
-                                    </div>
-                                  </div>
-                                  <!-- /user-card -->
-                                </div>
-                                <div class="col-md-4">
-                                  <!-- user-card -->
-                                  <div class="user-card">
-                                    <div class="user-card__img">
-                                      <img src="img/user-alexander-2x.jpg" alt="">
-  </div>
-                                      <div class="user-card__info">
-                                        <h4 class="user-card__heading">Alexander</h4>
-                                        <p class="mb-0 user-card__position">Backend developer</p>
-                                        <p class="mb-0 user-card__email text-truncate">alexander.backend@gmail.com</p>
-                                        <p class="mb-0 user-card__phone">+38 (050) 789 24 09</p>
-                                      </div>
-                                    </div>
-                                    <!-- /user-card -->
-                                  </div>
-                                  <div class="col-md-4">
-                                    <!-- user-card -->
-                                    <div class="user-card">
-                                      <div class="user-card__img">
-                                        <img src="img/user-mason-2x.jpg" alt="">
-  </div>
-                                        <div class="user-card__info">
-                                          <h4 class="user-card__heading">Mason</h4>
-                                          <p class="mb-0 user-card__position">QA</p>
-                                          <p class="mb-0 user-card__email text-truncate">mason.qa@gmail.com</p>
-                                          <p class="mb-0 user-card__phone">+38 (095) 283 27 00</p>
-                                        </div>
-                                      </div>
-                                      <!-- /user-card -->
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="container users__btn-container">
-                                  <div class="row">
-                                    <div class="col d-flex">
-                                      <button class="btn btn--primary btn--invers m-auto users__btn">Show more</button>
-                                    </div>
-                                  </div>
+                                <div class="form-group">
+                                  <label for="exampleInput3" class="registration__lbl">Phone</label>
+                                  <input type="tel" class="form-control registration__control" id="exampleInput3" placeholder="+38 (___)  ___ __ __">
+        </div>
                                 </div>
                               </div>
-                              <!-- /users -->
-
-
-                              <!-- registration -->
-                              <div class="registration">
-                                <div class="container registration__headings-wrap">
-                                  <div class="row">
-                                    <div class="col">
-                                      <h2 class="registration__heading">Register to get a work</h2>
-                                      <h5 class="registration__subheading">Attention! After successful registration and alert, update the list of users in the block from the top</h5>
-                                    </div>
+                              <div class="row registration__row">
+                                <div class="col-md-6">
+                                  <div class="form-group registration__select">
+                                    <input type="text" class="form-control registration__control" id="exampleInput4" placeholder="Select your position" readonly>
+                                    <ul class="registration__dropdown registration-dropdown d-none" id="exempleDropdown">
+                                      <li class="registration-dropdown__item registration-dropdown__item--selected">Selected item</li>
+                                      <li class="registration-dropdown__item">Second item</li>
+                                      <li class="registration-dropdown__item">Thurd item</li>
+                                    </ul>
                                   </div>
                                 </div>
-                                <form class="container registration__form">
-                                  <div class="row registration__row">
-                                    <div class="col-md-4 ">
-                                      <div class="form-group">
-                                        <label for="exampleInputEmail1" class="registration__lbl">Name</label>
-                                        <input type="text" class="form-control registration__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your name">
-        </div>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <div class="form-group">
-                                          <label for="exampleInputEmail2" class="registration__lbl">Email</label>
-                                          <input type="email" class="form-control registration__control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Your email">
-        </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <div class="form-group">
-                                            <label for="exampleInputEmail3" class="registration__lbl">Phone</label>
-                                            <input type="tel" class="form-control registration__control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="+38 (___)  ___ __ __">
-        </div>
-                                          </div>
-                                        </div>
-                                        <div class="row registration__row">
-                                          <div class="col-md-6">
-                                            <div class="form-group registration__select">
-                                              <input type="text" class="form-control registration__control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="Select your position">
-                                              <ul class="registration__dropdown registration-dropdown d-none">
-                                                <li class="registration-dropdown__item registration-dropdown__item--selected">Selected item</li>
-                                                <li class="registration-dropdown__item">Second item</li>
-                                                <li class="registration-dropdown__item">Thurd item</li>
-                                              </ul>
-                                            </div>
-                                          </div>
-                                          <div class="col-md-6">
-                                            <div class="form-group">
-                                              <div class="input-group">
-                                                <div class="custom-file">
-                                                  <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-                                                  <label class="custom-file-label registration__control" for="inputGroupFile04">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <div class="input-group">
+                                      <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                        <label class="custom-file-label registration__control" for="inputGroupFile04">
                 <span>Upload your photo</span>
                 <div class="custom-file-label__btn" role="button">
                   <span class="d-none d-md-inline-block">Browse</span>
@@ -423,20 +471,20 @@
                   </svg>
                 </div>
               </label>
-                                                </div>
-                                              </div>
-                                              <small class="registration__hint">File format jpg  up to 5 MB, the minimum size of 70x70px</small>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="row">
-                                          <div class="col d-flex">
-                                            <button type="submit" class="btn btn--primary registration__btn m-auto" disabled>Sign Up</button>
-                                          </div>
-                                        </div>
-                                </form>
+                                      </div>
+                                    </div>
+                                    <small class="registration__hint">File format jpg  up to 5 MB, the minimum size of 70x70px</small>
+                                  </div>
+                                </div>
                               </div>
-                              <!-- /registration -->
+                              <div class="row">
+                                <div class="col d-flex">
+                                  <button type="submit" class="btn btn--primary registration__btn m-auto" disabled>Sign Up</button>
+                                </div>
+                              </div>
+                      </form>
+                    </div>
+                    <!-- /registration -->
 
       </main>
 
